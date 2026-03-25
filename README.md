@@ -1,4 +1,4 @@
-# LangChain 轻量化本地向量检索实验
+# LangChain 轻量化本地向量库检索实验
 
 FAISS + HuggingFace 中文嵌入模型，将 Excel 数据向量化存储(LangChain-faiss向量库)并支持语义检索。
 
@@ -112,5 +112,4 @@ python search.py
 本项目仅供学习和研究用途，不提供任何明示或暗示的保证。作者不对因使用本项目而产生的任何直接或间接损失承担责任。
 
 - 本项目所使用的第三方模型和库（HuggingFace、FAISS、LangChain 等）的版权归各自所有者所有
-- 用户应自行确保数据的合法性和合规性
 - 请勿将本项目用于任何违反法律法规的用途
