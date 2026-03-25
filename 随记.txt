@@ -1,0 +1,7 @@
+// HugginngFace(开源向量推理模型) ->  (向量存储) -> LangChain(向量与文本结合) ->  faiss(向量检索)
+
+// dump.py 会把库里的数据和对应768维向量完整打印出来。
+
+// faiss_store(index.faiss、index.pkl)  LangChain-faiss引擎中的向量库。
+
+// models   all-MiniLM-L6-v2(英文模型)   text2vec-base-chinese(中文模型)
