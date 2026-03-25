@@ -5,7 +5,7 @@ from common import (
     search_documents,
 )
 
-# TODO: 修改为可配置的参数
+# TODO: 配置参数
 TOP_K = 5
 
 
