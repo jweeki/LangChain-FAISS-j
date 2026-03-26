@@ -5,3 +5,7 @@
 // faiss_store(index.faiss、index.pkl)  LangChain-faiss引擎中的向量库。
 
 // models   all-MiniLM-L6-v2(英文模型)   text2vec-base-chinese(中文模型)
+
+// 前端启动：npm run dev
+
+FAISS + HuggingFace 中文嵌入模型，轻量化本地向量库(LangChain-faiss向量库)检索实验平台。

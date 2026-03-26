@@ -1,0 +1,245 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(32, 177, 196, 0.18), transparent 32%),
+    radial-gradient(circle at 78% 18%, rgba(97, 142, 255, 0.16), transparent 28%),
+    radial-gradient(circle at 50% 85%, rgba(89, 214, 255, 0.12), transparent 30%),
+    #071019;
+  color: #ecf8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -12%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(95, 230, 255, 0.08), transparent 30%),
+    radial-gradient(circle at 70% 55%, rgba(101, 140, 255, 0.07), transparent 34%);
+  filter: blur(40px);
+  animation: backgroundBreath 12s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -3;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.site-shell,
+.console-shell {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, calc(100vw - 48px));
+  margin: 0 auto;
+}
+
+.console-shell {
+  width: min(1380px, calc(100vw - 40px));
+  min-height: calc(100vh - 48px);
+}
+
+.glass {
+  background: rgba(8, 18, 30, 0.58);
+  border: 1px solid rgba(127, 220, 255, 0.16);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 22px;
+  border-radius: 24px;
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7cf2ff, #d8fbff);
+  box-shadow: 0 0 16px rgba(124, 242, 255, 0.85);
+}
+
+.brand-kicker {
+  margin: 0 0 4px;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(212, 244, 255, 0.56);
+}
+
+.brand-lockup strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.topnav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(133, 221, 255, 0.18);
+  background: rgba(255, 255, 255, 0.02);
+  color: #f0fbff;
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.topnav a:hover {
+  transform: translateY(-1px);
+  border-color: rgba(154, 232, 255, 0.42);
+  box-shadow: 0 0 18px rgba(92, 212, 255, 0.14);
+}
+
+.ambient,
+.grid-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ambient-a,
+.ambient-b {
+  filter: blur(80px);
+  opacity: 0.7;
+}
+
+.ambient-a {
+  background: radial-gradient(circle at 18% 20%, rgba(93, 216, 255, 0.18), transparent 34%);
+  animation: backgroundBreath 14s ease-in-out infinite;
+}
+
+.ambient-b {
+  background: radial-gradient(circle at 82% 28%, rgba(87, 126, 255, 0.14), transparent 32%);
+  animation: backgroundBreath 16s ease-in-out infinite reverse;
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black 38%, transparent 100%);
+  opacity: 0.24;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(178, 231, 247, 0.6);
+}
+
+.reveal {
+  opacity: 0;
+  animation: fadeUp 900ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+.reveal-1 {
+  animation-delay: 80ms;
+}
+
+.reveal-2 {
+  animation-delay: 180ms;
+}
+
+.reveal-3 {
+  animation-delay: 280ms;
+}
+
+.reveal-4 {
+  animation-delay: 380ms;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes backgroundBreath {
+  0%,
+  100% {
+    transform: scale(1) translate3d(0, 0, 0);
+    opacity: 0.72;
+  }
+
+  50% {
+    transform: scale(1.04) translate3d(0, -10px, 0);
+    opacity: 0.96;
+  }
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .site-shell,
+  .console-shell {
+    width: min(100vw - 32px, 1180px);
+  }
+
+  .console-shell {
+    width: min(100vw - 24px, 1380px);
+    min-height: calc(100vh - 32px);
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
